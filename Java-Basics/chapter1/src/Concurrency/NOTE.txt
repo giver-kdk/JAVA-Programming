@@ -1,0 +1,10 @@
+- Process is a program in execution 
+- Thread is a part of process that can be run independently
+
+- Thread life cycle in JAVA
+- Multi-Threading: running multiple threads simultaneously
+    - Implement 'Runnable' interface
+    - Extend 'Thread' class
+- Thread Synchronization (3 ways)
+
+- Multi-Threading Code: https://www.scientecheasy.com/2020/08/thread-priority-in-java.html/
