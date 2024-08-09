@@ -1,0 +1,14 @@
+Major Components of JAVA Architecture: 
+- JVM
+- JRE 
+- JVM
+
+To compile JAVA in Command Prompt (Creates a .class file): 
+- javac fileName.java
+
+To run the JAVA class in Command Prompt: 
+- java fileName
+
+Check "C:Drive > Program Files > Java" for JDK 
+
+Set environment variable of JAVA Binary: path-to-bin (Eg:C:\Program Files (x86)\Java\jdk1.8.0_77\bin)

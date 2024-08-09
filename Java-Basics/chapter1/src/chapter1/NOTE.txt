@@ -1,0 +1,6 @@
+- Create a class by right clicking in 'project_name' folder
+- Press 'Shift + F6' to run specific java file
+
+
+- Create a package by right clicking in 'Source Packages' folder
+- Create New > JAVA Package

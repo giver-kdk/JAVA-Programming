@@ -1,0 +1,21 @@
+Variables: 
+	- Local
+	- Global
+	- Static (Variable/Attribute will belong to a class rather than object)
+	- Final (Unmodifiable Variable)
+
+
+Array Declaration (Similar to C#):
+	- int[] array = {1, 2, 4};
+	- int []array = new int[]{1, 2, 3};
+	- int a[][] = {{1, 2, 3}, {4, 5, 6}}
+	- int[][] a = {{1, 2, 3}, {4, 5, 6}} ?
+
+Array Methods and Properties: 
+	- int[] a = {1, 2, 3};
+	- a.length			(Returns length of array)
+
+Loop: Foreach loop is faster than for loop because of no condition check
+	- Foreach Syntax: 
+		- int[] a = {1, 2, 3}
+		- for(int num: a){}
