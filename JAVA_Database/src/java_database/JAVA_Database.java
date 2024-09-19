@@ -36,14 +36,24 @@ public class JAVA_Database {
                 System.out.println("Connected!");
             }
             // String query = "INSERT INTO students VALUES(2, 'Hari Shretsha', 'hari123@gmail.com')"; // query to be run
-            String query = "select *from students"; // query to be run
             st = con.createStatement();
+            
+            st.executeUpdate("INSERT INTO student(name, email) VALUES('Krishna Bahadur', 'krishnabahadur@gmail.com')");
+            
+            // Read Query
+            String query = "SELECT * FROM student"; // query to be run
+
             ResultSet rs = st.executeQuery(query); // Execute query
-            rs.next();
-            String name = rs.getString("name"); // Retrieve name from db
+            
+            while(rs.next())
+            {
+                System.out.println(rs.getString("name") + rs.getString("email"));
+            }
+            // rs.next();
+            // String name = rs.getString("name"); // Retrieve name from db
 
             
-            System.out.println(name); // Print result on console
+            // System.out.println(name); // Print result on console
             st.close(); // close statement
             con.close(); // close connection
             System.out.println("Connection Closed....");
