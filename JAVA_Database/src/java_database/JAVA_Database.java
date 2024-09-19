@@ -8,6 +8,9 @@ package java_database;
 import java.sql.*;
 import java.io.*;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*; 
 
 /**
  *
@@ -24,46 +27,83 @@ public class JAVA_Database {
      */
     public static void main(String[] args) throws SQLException
     {
-        // 
-        Connection con = null;
+        
+        JFrame f = new JFrame("JAVA with Database");
+        f.setLayout(null);
 
-        Statement st;
-        try{
-            con=DriverManager.getConnection(url + db, user, pw);
-            con.setAutoCommit(true);
-            if(con != null)
-            {
-                System.out.println("Connected!");
+        // Create and set bounds for the label
+        JLabel l1 = new JLabel("Name: ");
+        l1.setBounds(20, 20, 250, 30);
+        
+        // Create and set bounds for text fields
+        JTextField t = new JTextField();
+        t.setBounds(20, 50, 250, 20);
+
+        // Create and set bounds for the label
+        JLabel l2 = new JLabel("Email: ");
+        l2.setBounds(20, 75, 250, 30);
+        
+        JTextField t2 = new JTextField();
+        t2.setBounds(20, 105, 250, 20);
+
+        // Create and set bounds for buttons
+        JButton b1 = new JButton("Insert");
+        b1.setBounds(20, 150, 250, 30);
+        
+        // DB Operation
+        b1.addActionListener(new ActionListener(){  
+        public void actionPerformed(ActionEvent e){  
+            Connection con = null;
+            Statement st;
+            try{
+                con=DriverManager.getConnection(url + db, user, pw);
+                con.setAutoCommit(true);
+                if(con != null)
+                {
+                    System.out.println("Connected!");
+                }
+                st = con.createStatement();
+                
+                String name = t.getText();
+                String email = t2.getText();
+                st.executeUpdate("INSERT INTO student(name, email) VALUES('" + name + "', '" + email + "')");
+
+                // Read Query
+                String query = "SELECT * FROM student"; // query to be run
+
+                ResultSet rs = st.executeQuery(query); // Execute query
+
+                while(rs.next())
+                {
+                    System.out.println(rs.getString("name"));
+                    System.out.println(rs.getString("email"));
+                }
+
+                st.close(); // close statement
+                con.close(); // close connection
+                System.out.println("Connection Closed....");
+
+                con.commit();
             }
-            // String query = "INSERT INTO students VALUES(2, 'Hari Shretsha', 'hari123@gmail.com')"; // query to be run
-            st = con.createStatement();
-            
-            st.executeUpdate("INSERT INTO student(name, email) VALUES('Krishna Bahadur', 'krishnabahadur@gmail.com')");
-            
-            // Read Query
-            String query = "SELECT * FROM student"; // query to be run
+            catch(SQLException ex){
 
-            ResultSet rs = st.executeQuery(query); // Execute query
-            
-            while(rs.next())
-            {
-                System.out.println(rs.getString("name") + rs.getString("email"));
+                // con.rollback();
             }
-            // rs.next();
-            // String name = rs.getString("name"); // Retrieve name from db
+        }  
+        });  
 
-            
-            // System.out.println(name); // Print result on console
-            st.close(); // close statement
-            con.close(); // close connection
-            System.out.println("Connection Closed....");
+        // Add components to the frame
+        f.add(l1);
+        f.add(l2);
+        f.add(t);
+        f.add(t2);
+        f.add(b1);
+       
 
-            con.commit();
-        }
-        catch(SQLException ex){
-            
-            // con.rollback();
-        }
+        // Set frame properties
+        f.setSize(300, 250); // Adjust frame size to fit all components
+        f.setVisible(true); // Make the frame visible
+        
         
     }
     
