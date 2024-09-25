@@ -5,3 +5,6 @@ Guide:
 NOTE: 
 - TCP responses only after listening to client, accepting it and then connect.
 - UDP doesn't have to listen and accept
+
+SENDING EMAIL from JAVA: 
+- Download Java Activation Framework(JAF)

@@ -11,7 +11,7 @@ import java.net.*;
  * @author Nagarjuna 14
  */
 public class udp_server {
-    public static void main(String[] s){
+    public static void main(String[] s) throws Exception{
             
         try{
             DatagramSocket socket = new DatagramSocket(9999);

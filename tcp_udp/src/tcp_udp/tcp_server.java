@@ -23,6 +23,7 @@ public class tcp_server {
             System.out.println(message);  
             out.writeUTF("Hello Client");
             
+            input.close();
             client.close();
         }
         catch(Exception e){

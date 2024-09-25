@@ -16,10 +16,13 @@ public class tcp_client {
             // Message sent to server
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             DataInputStream in = new DataInputStream(socket.getInputStream());
+            // Write output in UTF character encoding format
             out.writeUTF("Hello Server");     
             String message = in.readUTF();
             System.out.println(message);
             
+            out.flush();
+            out.close();
             socket.close();
         }
         catch(Exception e){
