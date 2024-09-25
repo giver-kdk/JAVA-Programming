@@ -11,7 +11,7 @@ import java.io.*;
  * @author Nagarjuna 14
  */
 public class tcp_server {
-    public static void main(String[] s){
+    public static void main(String[] s) throws Exception{
         try{
             ServerSocket server = new ServerSocket(1234);
             Socket client = server.accept();

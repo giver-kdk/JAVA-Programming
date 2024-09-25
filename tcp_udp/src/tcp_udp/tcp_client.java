@@ -5,11 +5,10 @@ package tcp_udp;
 import java.io.*;
 import java.net.*;
 /**
- *
  * @author Nagarjuna 14
  */
 public class tcp_client {
-    public static void main(String[] s){
+    public static void main(String[] s) throws Exception{
         try{
             Socket socket = new Socket("localhost",1234);
             System.out.println(socket + " Server is connected.");
