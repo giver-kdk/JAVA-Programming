@@ -1,0 +1,9 @@
+- Download JavaFX from: https://gluonhq.com/products/javafx/
+	- Get the Windows architecture, 64 bit, SDK file
+- Extract the downloaded file to 'C:/Program Files/Java'
+- Open NetBeans: 
+	- Click on Tools > Libraries
+	- Click New Library
+	- Type JavaFX and click OK
+	- Click on 'Add JAR/Folder' and go-to 'C:/Program Files/Java/[JavaFX_Folder_Name]/lib'
+	- Select all the files inside it and click OK
