@@ -1,0 +1,7 @@
+- Install servlet-api.jar from http://www.java2s.com/Code/Jar/s/Downloadservletapijar.htm
+- Add servlet-api.jar as a package in the JavaWeb project
+- Write index.jsp code
+- Create a new Java class named for creating Servlet and write Servlet code there
+- In the JavaWeb project, write code for page
+	- To add web logic, create a web.xml file by Right Clicking on the project > select Others
+        - Set 'Servlet' and 'ServletMapping' in web.xml
