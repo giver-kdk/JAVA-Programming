@@ -5,3 +5,6 @@
 - In the JavaWeb project, write code for page
 	- To add web logic, create a web.xml file by Right Clicking on the project > select Others
         - Set 'Servlet' and 'ServletMapping' in web.xml
+
+
+- NOTE: You might have to use latest NetBean2.2 and jdk22 
