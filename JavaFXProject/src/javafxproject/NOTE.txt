@@ -7,11 +7,16 @@
 	- Type JavaFX and click OK
 	- Click on 'Add JAR/Folder' and go-to 'C:/Program Files/Java/[JavaFX_Folder_Name]/lib'
 	- Select all the files inside it and click OK
-	- Right click the Project and go-to Libraries section, Add Libraries, and then select JavaFX and then click Add Library
+	- Right click the JAVA Project > Properties and go-to Libraries section, Add Libraries, and then select JavaFX and then click Add Library
 		- On same panel, Go-to Build > Compiling and uncheck 'Compile on Save'
-		- On same panel, Go-to Run, and Paste the script inside 'VM Options' textarea and click OK: 
+                - If your Netbeans uses JAVA Version < 9, then skip this step, else:
+                    - On same panel, Go-to Run, and Paste the script inside 'VM Options' textarea and click OK: 
 			--module-path "C:\Program Files\Java\javafx-sdk-23\lib" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics
+                        or try,
+                        --module-path "C:\Program Files\Java\javafx-sdk-23\lib" --add-modules = javafx.controls,javafx.fxml,javafx.base,javafx.graphics
+                
 
 - To run the app, right click project, select 'Clean and Build'
-	- Then run the app from command prompt as: 
+        - Then run the app with 'Shift + F6'
+	- If your Netbeans uses JAVA Version >= 9, then run the app from command prompt as: 
 		- java -jar "C:\Users\Nagarjuna 14\Documents\Java-Programming\JavaFXProject\dist\JavaFXProject.jar"

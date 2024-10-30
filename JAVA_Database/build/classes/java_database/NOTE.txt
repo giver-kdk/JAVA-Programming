@@ -5,7 +5,7 @@ Download MySQL Connector for JAVA from: https://dev.mysql.com/downloads/connecto
     - Create a JAVA Project
     - Right Click on 'Libraries' folder and click Add Jar/Folder
     - Goto the MySQL Connector path and add the mysql-connector-j-<version>.jar file as Library
-
+    - NOTE: This MySQL Connector for JAVA is similar to ADO.NET for .NET
 
 
 DB Setup:
