@@ -1,0 +1,10 @@
+Stub: Client side 
+Skeleton: Server side
+
+Steps: 
+	- Create the Remote Interface (Eg: Interface with method to add numbers)
+        - Implement the Remote Interface
+        - Create Server RMI
+        - Create Client RMI (Catch the skeleton with the help of registry)
+	- Compile server side code
+	- Compile client side code
