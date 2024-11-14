@@ -6,5 +6,7 @@ Steps:
         - Implement the Remote Interface
         - Create Server RMI
         - Create Client RMI (Catch the skeleton with the help of registry)
+        - Compile the project
+        - Run the registry 
 	- Compile server side code
 	- Compile client side code
