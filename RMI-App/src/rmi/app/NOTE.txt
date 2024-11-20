@@ -10,3 +10,11 @@ Steps:
         - Run the registry 
 	- Compile server side code
 	- Compile client side code
+
+
+Execution
+    - Go to source code path 
+    - Run: javac *.java
+    - Run: start rmiregistery
+    - Run: java ServerRMI
+    - Run: java ClientRMI

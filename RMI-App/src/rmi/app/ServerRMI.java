@@ -11,7 +11,7 @@ import java.rmi.*;
 import java.rmi.registry.*;
 import java.rmi.server.*;               // For 'UnicastRemoteObject'
 
-public class ServerRMI {
+public class ServerRMI extends AdderRemote {
     public ServerRMI(){
         
     }
