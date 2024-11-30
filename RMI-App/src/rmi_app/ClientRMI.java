@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package rmi.app;
+package rmi_app;
 import java.rmi.*;
-import java.rmi.registry.*;
-import java.rmi.server.*; 
+//import java.rmi.registry.*;
+//import java.rmi.server.*; 
 
 public class ClientRMI {
     // Add a constructor
@@ -16,10 +11,10 @@ public class ClientRMI {
     public static void main(String[] args){
         try{
             // Get all registry list from Server RMI
-            Registry registry = LocateRegistry.getRegistry();
+//            Registry registry = LocateRegistry.getRegistry();
             // Check for 'csit' registry that we set in ServerRMI
             // Catch the skeleton with the help of registry
-            Adder stub = (Adder) registry.lookup("csit");
+            Adder stub = (Adder) Naming.lookup("csit");
             // Access the method of Server from Client side
             int sum = stub.add(2, 3);
             System.out.println("Sum is: " + sum);

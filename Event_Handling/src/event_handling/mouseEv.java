@@ -1,66 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package event_handling;
 
-/**
- *
- * @author Nagarjuna 14
- */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class mouseEv extends MouseAdapter {
-    JFrame f;
-    JTextField tf1, tf2;
-    JLabel label;
-
-    mouseEv() {
-
-
-        f = new JFrame("Mouse Event Example");
-
-
-        tf1 = new JTextField(15);
-        tf2 = new JTextField(15);
-
-        // Create label
-        label = new JLabel("Result");
-
-
-        f.add(tf1);
-        f.add(tf2);
-        f.add(label);
-
-
-        f.addMouseListener(this);
-        f.setSize(400, 400);
-        f.setLayout(new FlowLayout());
-        f.setVisible(true);
-    }
+class mouseEv {
 
     public static void main(String[] args) {
-        new mouseEv();
+        JFrame f = new JFrame("Adder Subtractor App");
+        JTextField t1 = new JTextField();
+        JTextField t2 = new JTextField();
+        JButton b = new JButton("Add/Subtract");
+        JLabel l = new JLabel("Result: ");
+
+        t1.setBounds(10, 20, 200, 30);
+        t2.setBounds(10, 60, 200, 30);
+        b.setBounds(10, 100, 200, 30);
+        l.setBounds(10, 140, 200, 30);
+
+        b.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                int n1 = Integer.parseInt(t1.getText());
+                int n2 = Integer.parseInt(t2.getText());
+                int sum = n1 + n2;
+                l.setText("Result: " + sum);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                int n1 = Integer.parseInt(t1.getText());
+                int n2 = Integer.parseInt(t2.getText());
+                int diff = n1 - n2;
+                l.setText("Result: " + diff);
+            }
+        });
+
+        f.setLayout(null);
+        f.add(t1);
+        f.add(t2);
+        f.add(b);
+        f.add(l);
+        f.setSize(300, 250);
+        f.setVisible(true);
     }
-    @Override
-    public void mousePressed(MouseEvent e) {
-        int num_1 = Integer.parseInt(tf1.getText());
-        int num_2 = Integer.parseInt(tf2.getText());
-        int sum = num_1 + num_2;
-        label.setText("Result : " + sum);
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        int num_1 = Integer.parseInt(tf1.getText());
-        int num_2 = Integer.parseInt(tf2.getText());
-        int diff = num_1 - num_2;
-        label.setText("Result : " + diff);
-
-    }
-
 }

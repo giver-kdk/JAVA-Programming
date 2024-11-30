@@ -15,6 +15,6 @@ Steps:
 Execution
     - Go to source code path 
     - Run: javac *.java
-    - Run: start rmiregistery
+    - Run: start rmiregistry
     - Run: java ServerRMI
     - Run: java ClientRMI

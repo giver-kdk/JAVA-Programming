@@ -6,10 +6,10 @@
 package java_database;
 // Import 'sql' for accessing 'Connection', 'Statement' classes
 import java.sql.*;
-import java.io.*;
+//import java.io.*;
 
 import javax.swing.*;
-import java.awt.*;
+//import java.awt.*;
 import java.awt.event.*; 
 
 /**
@@ -54,22 +54,21 @@ public class JAVA_Database {
         b1.addActionListener(new ActionListener(){  
         public void actionPerformed(ActionEvent e){  
             Connection con = null;
-            Statement st;
             try{
                 con=DriverManager.getConnection(url + db, user, pw);
-                con.setAutoCommit(true);
                 if(con != null)
                 {
                     System.out.println("Connected!");
                 }
-                st = con.createStatement();
+                Statement st = con.createStatement();
                 
                 String name = t.getText();
                 String email = t2.getText();
-                st.executeUpdate("INSERT INTO student(name, email) VALUES('" + name + "', '" + email + "')");
+                String query = "INSERT INTO student(name, email) VALUES('" + name + "', '" + email + "')"; // query to be run
+                st.executeUpdate(query);
 
                 // Read Query
-                String query = "SELECT * FROM student"; // query to be run
+                query = "SELECT * FROM student"; // query to be run
 
                 ResultSet rs = st.executeQuery(query); // Execute query
 
@@ -82,12 +81,9 @@ public class JAVA_Database {
                 st.close(); // close statement
                 con.close(); // close connection
                 System.out.println("Connection Closed....");
-
-                con.commit();
             }
             catch(SQLException ex){
-
-                // con.rollback();
+                System.out.println(ex.getMessage());
             }
         }  
         });  

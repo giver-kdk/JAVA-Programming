@@ -1,4 +1,4 @@
-package rmi.app;
+package rmi_app;
 import java.rmi.*;
 
 /**
