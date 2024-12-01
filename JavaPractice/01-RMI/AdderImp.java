@@ -3,7 +3,7 @@ import java.rmi.*;
 import java.rmi.server.*;
 
 public class AdderImp extends UnicastRemoteObject implements Adder{
-	AdderImp() throws RemoteExpcetion
+	AdderImp() throws RemoteException
 	{
 		super();
 	}
