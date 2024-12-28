@@ -40,7 +40,7 @@ public class JAVA_Database {
         public void actionPerformed(ActionEvent e){  
             Connection con = null;
             try{
-                con=DriverManager.getConnection(url + db, user, pw);
+                con = DriverManager.getConnection(url + db, user, pw);
                 if(con != null)
                 {
                     System.out.println("Connected!");
