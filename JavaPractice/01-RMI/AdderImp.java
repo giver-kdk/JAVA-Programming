@@ -2,7 +2,7 @@ package rmi_app;
 import java.rmi.*;
 import java.rmi.server.*;
 
-public class AdderImp extends UnicastRemoteObject implements Adder{
+class AdderImp extends UnicastRemoteObject implements Adder{
 	AdderImp() throws RemoteException
 	{
 		super();

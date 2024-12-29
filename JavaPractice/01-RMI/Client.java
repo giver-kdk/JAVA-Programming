@@ -2,7 +2,7 @@ package rmi_app;
 import java.rmi.*;
 
 
-public class Client{
+class Client{
 	Client(){
 
 	}

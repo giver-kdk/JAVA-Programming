@@ -17,7 +17,7 @@ class ServletGet extends HttpServlet{
 
 		PrintWriter pw = res.getWriter();
 
-		pw.println("<h1>" + message + "</h1");
+		pw.println("<h1>" + message + "</h1>");
 		pw.close();
 	}
 
