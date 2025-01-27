@@ -13,7 +13,7 @@ class ServerSide{
 		Scanner ins = new Scanner(cs.getInputStream());
 		PrintWriter outs = new PrintWriter(cs.getOutputStream(), true);
 
-		Strinf mes = ins.nextLine();
+		String mes = ins.nextLine();
 		System.out.println("From Client: " + mes);
 		outs.println("Hello Client");
 

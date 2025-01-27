@@ -1,0 +1,17 @@
+Download MySQL Connector for JAVA from: https://dev.mysql.com/downloads/connector/j/
+    - Download Zip File
+    - Platform Independent version
+    - Extract Zip and save somewhere safe
+    - Create a JAVA Project
+    - Right Click on 'Libraries' folder and click Add Jar/Folder
+    - Goto the MySQL Connector path and add the mysql-connector-j-<version>.jar file as Library
+    - NOTE: This MySQL Connector for JAVA is similar to ADO.NET for .NET
+
+
+DB Setup:
+    - Open XAMPP and start MySQL service
+    - Create the database with table and columns
+    - In Netbeans, goto Windows > Services > Databases > Drivers > MySQL(Connector/JDriver)
+    - Right Click > Connect Using...
+    - Click 'Test Connection' and see if it says 'Connection Successful'
+

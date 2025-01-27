@@ -1,0 +1,32 @@
+/*
+ Write a program on TCP and UDP based socket programming
+ */
+package tcp_udp;
+import java.io.*;
+import java.net.*;
+/**
+ * @author Nagarjuna 14
+ */
+class tcp_client {
+    public static void main(String[] s) throws Exception{
+        try{
+            Socket socket = new Socket("localhost",1234);
+            System.out.println(socket + " Server is connected.");
+            
+            // Message sent to server
+            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+            DataInputStream in = new DataInputStream(socket.getInputStream());
+            // Write output in UTF character encoding format
+            out.writeUTF("Hello Server");     
+            String message = in.readUTF();
+            System.out.println(message);
+            
+            out.flush();
+            out.close();
+            socket.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+Guide: 
+- First, run the tcp/udp server.
+- Then run the tcp/udp client to connect with server and see the output
+
+NOTE: 
+- TCP responses only after listening to client, accepting it and then connect.
+- UDP doesn't have to listen and accept
+
+SENDING EMAIL from JAVA: 
+- Download Java Activation Framework(JAF)
