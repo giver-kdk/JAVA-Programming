@@ -4,19 +4,16 @@
  * and open the template in the editor.
  */
 
-package pkg02_jsp;
+package pkg01_rmi;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  *
  * @author DELL
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public interface Adder extends Remote{
+	int add(int a, int b) throws RemoteException;
 }
+

@@ -1,0 +1,8 @@
+- Move this 'jsp_app' project folder to Tomcat's webapp folder
+    - For example: C:/apache-tomcat-9.0.85/webapps/jsp_app
+
+- Start Tomcat by running the following script:
+    - <TOMCAT_HOME>/bin/startup.bat
+
+- Access the Servlet
+    - Open a web browser and navigate to the following URL: http://localhost:8080/jsp_app
