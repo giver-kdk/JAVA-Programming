@@ -1,0 +1,29 @@
+- Download TomCat 9 for Java 8 from: https://tomcat.apache.org/download-90.cgi
+    - Servlet API comes with Tomcat Server
+- Add the Tomcat libraries to the project
+
+- Compile Servlet class by right clicking the project and "Clean and Build": 
+
+- Create the Web Application Directory Structure
+    - Servlets must be deployed in a specific directory structure. Create the following structure:
+        web_app/
+        ├── WEB-INF/
+        │   ├── classes/
+        │   │   └── pkg01_servlet_get/
+        │   │       └── Main.class
+        │   └── web.xml
+        
+            - web_app: The root directory of your web application.
+            - WEB-INF: A required directory for servlet configuration.
+            - classes: Contains the compiled .class files.
+            - web.xml: The deployment descriptor file for your web application.
+
+- Deploy the Web Application to Tomcat
+    - Copy the web_app directory to the webapps directory of your Tomcat installation:
+        For example: C:/apache-tomcat-9.0.85/webapps/web_app
+
+- Start Tomcat by running the following script:
+    - <TOMCAT_HOME>/bin/startup.bat
+
+- Access the Servlet
+    - Open a web browser and navigate to the following URL: http://localhost:8080/web_app/hello

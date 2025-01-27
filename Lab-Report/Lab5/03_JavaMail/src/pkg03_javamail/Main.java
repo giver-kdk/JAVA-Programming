@@ -1,4 +1,5 @@
-package pkg01_mail;
+package pkg03_javamail;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;

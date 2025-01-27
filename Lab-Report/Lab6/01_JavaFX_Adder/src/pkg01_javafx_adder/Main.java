@@ -1,12 +1,5 @@
-package javafx_project;
+package pkg01_javafx_adder;
 
-/* 
-	Remember the import libraries as: 
-		- We need an application which has a stage 
-		- The stage have a scene with controls
-		- Controls are arranged in a layout
-		- User interacts which is an event
-*/
 import javafx.application.*;
 import javafx.stage.*;
 import javafx.scene.*;
@@ -14,7 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.event.*;
 
-public class AdderUI extends Application{
+public class Main extends Application{
 	TextField t1, t2;
 	Button b;
 	Label l;

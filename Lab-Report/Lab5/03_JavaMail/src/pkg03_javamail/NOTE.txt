@@ -1,0 +1,3 @@
+- Download Java Mail Library from: https://www.oracle.com/java/technologies/javamail-releases.html
+
+- Add the library to the project and run.
