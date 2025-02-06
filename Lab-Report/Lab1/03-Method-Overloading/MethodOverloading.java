@@ -1,5 +1,4 @@
 class MethodOverloading {
-
     // Method to calculate area of a rectangle (length * width)
     public double fingArea(double length, double width) {
         return length * width;
@@ -15,6 +14,7 @@ class MethodOverloading {
 
         // Calculate and print area of rectangle
         double rectangleArea = calculator.fingArea(5.0, 3.0);
+        int sum = 2 + 2;
         System.out.println("Area of Rectangle: " + rectangleArea);
 
         // Calculate and print area of circle

@@ -7,8 +7,9 @@ class AdderImp extends UnicastRemoteObject implements Adder{
 	{
 		super();
 	}
-	public int add(int a, int b)
+	public int add(int a, int b)	// Function with Input
 	{
-		return a+b;
+		int sum = a + b;			// Process
+		return sum;					// Output
 	}
 }
